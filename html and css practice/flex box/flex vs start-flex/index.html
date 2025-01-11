@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Justify-Content: start vs flex-start</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        margin: 20px;
+      }
+      .container {
+        display: flex;
+        gap: 10px;
+        margin-bottom: 30px;
+        padding: 10px;
+        border: 2px solid #ddd;
+        height: 100px;
+        background-color: #f9f9f9;
+      }
+      .item {
+        background-color: #4caf50;
+        color: white;
+        padding: 10px;
+        border-radius: 4px;
+      }
+      /* Writing mode demonstration */
+      .rtl {
+        direction: rtl;
+        flex-direction: row-reverse;
+        writing-mode: horizontal-tb; /* Text flows right-to-left */
+      }
+      .vertical {
+        writing-mode: vertical-rl; /* Text flows top-to-bottom, right-to-left */
+      }
+      /* Container styles */
+      .start {
+        justify-content: start;
+      }
+      .flex-start {
+        justify-content: flex-start;
+      }
+      .btm-h2 {
+        padding-top: 100px;
+      }
+    </style>
+  </head>
+  <body>
+    <h2>Justify-Content: start</h2>
+    <div class="container rtl start">
+      <div class="item">Item 1</div>
+      <div class="item">Item 2</div>
+      <div class="item">Item 3</div>
+    </div>
+    <div class="container vertical start">
+      <div class="item">Item 1</div>
+      <div class="item">Item 2</div>
+      <div class="item">Item 3</div>
+    </div>
+
+    <h2 class="btm-h2">Justify-Content: flex-start</h2>
+    <div class="container rtl flex-start">
+      <div class="item">Item 1</div>
+      <div class="item">Item 2</div>
+      <div class="item">Item 3</div>
+    </div>
+    <div class="container vertical flex-start">
+      <div class="item">Item 1</div>
+      <div class="item">Item 2</div>
+      <div class="item">Item 3</div>
+    </div>
+  </body>
+</html>

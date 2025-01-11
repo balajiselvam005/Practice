@@ -1,0 +1,40 @@
+.container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 1.5rem;
+  
+  padding-block: 2rem;
+  width: min(95%, 70rem);
+  margin-inline: auto;
+}
+
+.grid-col-span-2 {
+    grid-column: span 2;
+}
+
+.grid-row-span-2 {
+    grid-row: span 2;
+}
+
+.grid {
+  display: flex;
+  min-height: 200px;
+  justify-content: center;
+  align-items: center;
+}
+
+.grid-1 {
+  background-color: blue;
+}
+
+.grid-2 {
+  background-color: green
+}
+
+.grid-3 {
+  background-color: red;
+}
+
+.grid-4 {
+  background-color: yellow;
+}
